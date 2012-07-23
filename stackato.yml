@@ -1,0 +1,7 @@
+name: fuel-uptime
+instances: 1
+framework:
+  type: node
+mem: 128
+services:
+  mongodb: mongodb-65715
