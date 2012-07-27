@@ -4,4 +4,4 @@ framework:
   type: node
 mem: 128
 services:
-  mongodb: mongodb-65715
+  mongodb-65715: mongodb

@@ -66,10 +66,22 @@ var io = socketIo.listen(app);
 io.configure('production', function() {
   io.enable('browser client etag');
   io.set('log level', 1);
+	io.set('transports', [
+		'flashsocket'
+		, 'htmlfile'
+		, 'xhr-polling'
+		, 'jsonp-polling'
+	]);
 });
 
 io.configure('development', function() {
   if (!config.verbose) io.set('log level', 1);
+	io.set('transports', [
+		'flashsocket'
+		, 'htmlfile'
+		, 'xhr-polling'
+		, 'jsonp-polling'
+	]);
 });
 
 CheckEvent.on('afterInsert', function(event) {
